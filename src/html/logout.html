@@ -1,0 +1,6 @@
+<script>
+    const {remote, ipcRenderer} = require('electron');
+
+    remote.session.defaultSession.clearStorageData([], (data) => {});
+    ipcRenderer.send('redirect-window', 'login.html');
+</script>

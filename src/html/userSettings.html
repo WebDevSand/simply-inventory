@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "UTF-8">
+      <title>Simple Inventory</title>
+
+      <!-- Bootstrap loading -->
+      <link rel="stylesheet" href="../lib/bootstrap-4.0.0/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="../css/style.css" />
+      <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+      
+   </head>
+   
+    <body>
+
+        <div class="wrapper">
+            <!-- Sidebar -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Simple Inventory</h3>
+                    <span class="smallFont" style="font-weight: bold;" id="versionHolder"></span>
+                </div>
+
+                <div id="menuHolder">
+                </div>
+            </nav>
+
+            <div id="content" style="width:100%">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <button type="button" id="sidebarCollapse" class="btn btn-outline-secondary">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <div class="text-right" id="quickMenuHolder">
+
+                        </div>
+                    </div>
+                </nav>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                        <li class="breadcrumb-item">My Account</li>
+                        <li class="breadcrumb-item active" aria-current="page">User Settings</li>
+                    </ol>
+                </nav>
+
+                <div class="container-fluid" id="contentDiv">
+
+
+                    <div class="form-group row text-center" style="width:100%;">
+                        <div class="text-center col-md-12 col-lg-12"><b>User Settings</b></div>
+                    </div>
+                    <div class="form-group row" style="width:100%;">
+                        <div class="col-md-6 col-lg-6 text-right">
+                            <label class="col-form-label">Password</label>
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <button class="btn btn-outline-secondary" onclick="changePassword()">
+                                Change Password
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group row" style="width:100%;">
+                        <div class="col-md-6 col-lg-6 text-right">
+                            <label class="col-form-label">Font Size</label>
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <!-- <input type="text" value="" id="fontSize" class="form-control" style="width: 50px" /> 
+                            <button class="btn btn-outline-secondary" onclick="commonModule.decreaseFontSize()">
+                                <i class="fa fa-minus"></i>
+                            </button> -->
+                            <div class="input-group" style="width:150px;">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="commonModule.decreaseFontSize()">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control text-center" placeholder="" aria-label="" aria-describedby="basic-addon1" id="fontSize">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="commonModule.increaseFontSize()">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap and jQuery loading -->
+        <script src="../lib/jquery-3.5.1/jquery-3.5.1.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+        <script src="../lib/bootstrap-4.0.0/dist/js/bootstrap.bundle.js"></script>
+        <script src="../js/userSettings.js"></script>
+        <script src="../js/common.js"></script>
+   </body>
+</html>

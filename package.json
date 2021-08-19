@@ -1,0 +1,38 @@
+{
+  "name": "simple_inventory",
+  "version": "1.0.0",
+  "description": "Simple Inventory is a simple inventory management software, built to imporove the efficiency of business operations.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "Jacob Mathew <simpleinventory@orangetreesoft.com>",
+  "license": "Apache-2.0",
+  "homepage": "https://www.orangetreesoft.com/simple_inventory",
+  "build": {
+    "appId": "com.orangetreesoft.simple_inventory",
+    "productName": "Simple Inventory",
+    "linux": {
+        "category": "Utils",
+        "icon": "assets/icons",
+        "packageCategory": "utils", 
+        "maintainer": "Jacob Mathew <simpleinventory@orangetreesoft.com>",
+        "target": [ "deb" ],
+        "synopsis": "Simple Invetory Management software built on Electron.JS"
+    },
+    "win": {
+        "icon": "assets/icon.ico"
+    }
+  },
+  "dependencies": {
+    "excel4node": "^1.7.2",
+    "md5": "^2.2.1",
+    "moment": "^2.27.0",
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "electron": "^8.4.1"
+  }
+}
